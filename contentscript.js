@@ -107,7 +107,7 @@ function SetBuffersAndFlagsD(event) {
 function ConversionOptions(event) {              
     var which = event.keyCode;
     originalText = (div) ? event.target.innerText : event.target.value;   // Div is indicator of the element kind
-    oldText = originalText;                               // We use oldText here for comparing the texts of keydown and of keyup 
+//    oldText = originalText;                               // We use oldText here for comparing the texts of keydown and of keyup 
         //     -----     ------    -------    short-cuts options    ------    ------     ------
     if (event.ctrlKey && (which == 188 || which == 190 || which == 220) && !disableExtension) {// If ctrl + '<' or '>' or '|' were pressed
         if (!languagesArray || languagesArray.length < 2) {//  If not selected 2 languages in Options page
@@ -130,6 +130,7 @@ function ConversionOptions(event) {
 //*0   KeyUp event handler. Adding here the code that isn't suitted for keydown event. See remark (0)
 function SetGetBuffersU(event) {  
     originalText = (div) ? event.target.innerText : event.target.value;
+    oldText = newText;
     newText = originalText;               // We use newText here comparing the texts on keydown and on keyup
     var specialCharsPositions = $(event.target).data('specialCharsPositions');
     var lamAndAlifPositions = $(event.target).data('lamAndAlifPositions');
