@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        select {
+            background-color: aliceblue;
+            border: 1px solid #bf982a;
+            font-size: 13px;
+        }
+            select option:checked {  /*Not working on some browsers*/ 
+                background:blue;     /* Set the background color for selected items */
+                color: white;        /* Set the text color for selected items */
+            }
+    </style>
+</head>
+<body style="background-color:lightyellow;">
+    <script src="options.js"></script>
+    <img src="extension.png" alt="Image of this application" style="display: block; margin-left: auto; margin-right: auto;margin-bottom:0; width: 143px;height:91px;">
+    <div style="margin-left:40px;display:flex;">
+        <div style="width:610px;flex:1;">
+            <p style="font-size: 40px; color: blue;margin-bottom:20px;">How to use :</p>
+            <p style="font-size: 18px; white-space: pre-wrap; padding: 0px; margin: 0px; width: 610px;">Choose languages from the list.<span style="font-size: 14px;">         / at least two languages /</span></p>
+            <p style="font-size: 18px; white-space: pre-wrap; padding: 0px; margin: 0px;">To correct simple letters press 'ctrl' + the key under blue arrow <span style="font-size: 14px;">(mostly '<' key).</span></p>
+            <p style="font-size: 18px;padding:0px;margin:0px;">To correct capslock  press 'ctrl' + the key under green arrow <span style="font-size: 14px;">(mostly '>' key).</span></p>
+            <p style="font-size: 18px; padding: 0px; margin: 0px; ">To enforce uniform conversion press 'ctrl' + '|' keys.<span style="font-size: 14px; white-space: pre-wrap;">  / see description below /</span></p>
+        </div>
+        <div style="flex:2;">
+            <img src="Layout.png" alt="Latout of a standard windows keyboard" style="margin-top: 90px; width: 280px; height: 118px; float: right; border: 1px solid #bf982a;">
+        </div>
+    </div>
+    <br /><br />
+    <div>
+        <h2 style="margin-left:35px;">Choose languages</h2>
+        <div style="display:flex;">
+            <div style="flex:1; white-space: pre-wrap;" class="custom-select">
+                <select id="languages" title="Press Ctrl + click the languages" name="languages" style="width:200px; height:100px;margin-left:40px; float:left;" multiple>
+                    <option value="ar">Arabic  - العربية</option>
+                    <option value="en">English</option>
+                    <option value="he">Hebrew  - עברית</option>
+                    <option value="ru">Russian - Pусский</option>
+                    <option value="el">Greek  -  Ελληνικά</option>
+                </select>
+            </div>
+            <div style="flex:2;">
+                <h4 style="margin-left:25px;">SELECTED LANGUAGES</h4>
+                <ul id="selectedlanguages" style="float: left; font: 14px arial; color:blue; margin-top:0px;">
+                </ul>
+            </div>
+        </div>
+        <br /> <br />
+        <h3 style="margin-left:35px;">
+            Here are the last 3 conversions text.
+        </h3>
+        <textarea id="ta" style="width: 200px; height: 120px; margin-left: 40px; border: 1px solid #bf982a;"></textarea>
+        <br /><br /><br />
+        <h2 style="margin-left: 35px; margin-bottom: 0;">Instructions</h2>
+        <p style="font-size: 14px; white-space: pre-wrap; margin-top: 0;">
+            * With this application you can correct a text that was typed in a wrong language (gibberish).<br>
+            * Select 2 languages at least.  Those whom you use.<br>
+            * In order to correct simple letters (that is , not BIG letters) , use 'Ctrl' + '<'(Less-Than sign). Make sure the text element is focused.<br />
+            * If you typed wrongly when Capslock key is on, (BIG LETTERS) , correct this by pressing 'Ctrl'(control key) + '>'(Greater-Than sign).<br />
+            * If you have a text with a mix of languages to convert , you can enforce one-language conversion by 'Ctrl' + '|'(vertical bar).<br />
+            * If after conversion for some reason you need back the original wrong text , but it was erased , you can get the original text
+              of the <span style="font-size: 14px; font-weight:bold;">last 3 conversions</span> , in the little rectangle(text area) above.
+              I recommend , that if the content you typed is very important for you , copy it before converting.
+              <span style="font-size: 14px; font-weight:bold;">If you converted a secret code</span> like password , you should convert a new text (or empty) 3 <span style="font-size: 14px; font-weight:bold;">more</span> times untill it disappears.<br />
+            * On Facebook/Twitter you can get the converted text by clicking the plugin icon, in the opened pop up window.<br /><br />
+            * This is a first version of the application.<br />
+            * I wish you happy and correct typing.
+        </p>
+    </div>
+    <br />
+    <br />
+    <img src="jj_Technologies.png" alt="Author temporary logo" style="display: block; margin-left: auto; margin-right: auto;margin-bottom:0; width: 210px;height:58px">
+
+</body>
+</html>
+
+
+
