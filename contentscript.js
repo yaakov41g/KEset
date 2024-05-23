@@ -454,6 +454,8 @@ function BuildDivHTML(str) {
 function GetLinesArray(str) {              
     let newStr = str.replace(/\n+/g, '|'); // Replaces all the '\n' signs by '|'
     let substrings = newStr.split('|');    // Gets the splitted lines into the array
+    if (substrings[substrings.length - 1] == "")
+       substrings.pop();
     return substrings;                     // Returns the array
 }
 //   --            --            --            --             --            --
