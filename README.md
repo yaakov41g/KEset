@@ -3,7 +3,8 @@
 
 **WHAT IS KEset ?**
 ----------------
-‏KEset is a plug-in application that corrects gibberish typing.  For example : If you typed 'akuo' gibberish, it will be corrected to 'שלום' (hello in hebrew)
+‏ KEset is a plug-in application that corrects gibberish typing.  For example : If you typed 'اثممخ صخقمي' gibberish, it will be 'hello corrected  to 'hello world'.
+
 See more in the description on Options.js 
 
 It can be downloaded from Microsoft Store , free , but with a few minor bugs :
