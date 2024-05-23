@@ -1,7 +1,6 @@
 # KEset
-correcting language typing
+**correcting language typing**
 
-UNDER CONSTRUCTION 
 
 
 
