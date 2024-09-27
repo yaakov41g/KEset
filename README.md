@@ -39,6 +39,6 @@ Now if you type wrongly in a textbox click on Ctrl + '<' or '>' according to the
 
 A video of how to use:
 
-https://youtu.be/Y0tJ5VolqLg
+[https://youtu.be/Y0tJ5VolqLg](https://www.youtube.com/watch?v=jdMnI-fTKkc)
 
 
