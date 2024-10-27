@@ -6,6 +6,7 @@
 ‏
 KEset is a plug-in application that corrects gibberish typing.
 For example : If you typed the gibberish 
+
 'יקךךם 'םרךג'
 
 it will be corrected  to 'hello world'.
