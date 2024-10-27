@@ -4,8 +4,8 @@
 **WHAT IS KEset ?**
 ----------------
 ‏                                           
-KEset is a plug-in application that corrects gibberish typing.  For example : If you typed
-'اثممخ صخقمي' gibberish, 
+KEset is a plug-in application that corrects gibberish typing.  For example : If you typed gibberish
+'اثممخ صخقمي' , 
 it will be 'hello corrected  to 'hello world'.
 
 See more in the description on Options.js 
