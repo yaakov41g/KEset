@@ -26,10 +26,15 @@ Arabic , English , Greek , Hebrew , Russian.
 
 **HOW TO INSTALL ?**
 -----------------
-It can be installed by copying all the files into a directory , then :
-Goto browser main menu (three dots) -> Extensions/Add-ons -> upload unpacked item ->
+DOWNLOAD DIRECTLY to EDge browser :
+https://microsoftedge.microsoft.com/addons/detail/keset-correcting-gibber/ddahpfaemgfcpjkcaeieidbigomonbhm
+
+INSTALL TO Chrome :
+Copy all the files into one directory , then :
+Goto browser main menu (three dots) -> Extensions/Add-ons -> Extensions management -> upload unpacked item ->
 -> [choose the directory that you created -> click OK  ||  That's it.
-See more details aboat the Download process on Simulator repository on Install and Run section.
+See more details aboat the copy and download process on "Simulator" repository on Install and Run section.
+https://github.com/yaakov41g/Simulator
 
 To start , you should select the languages :
 Click on the Puzzle button on the top of the browser and pin the icon of KEset.
