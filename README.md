@@ -36,7 +36,7 @@ INSTALL TO Chrome :
 Copy all the files into one directory , then :
 Goto browser main menu (three dots) -> Extensions/Add-ons -> Extensions management -> upload unpacked item ->
 -> [choose the directory that you created -> click OK  ||  That's it.
-See more details aboat the copy and download process on "Simulator" repository on Install and Run section.
+See more details aboat the copy and download process on "Simulator" repository on 'Install and Run' section.
 https://github.com/yaakov41g/Simulator
 
 To start , you should select the languages :
