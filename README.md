@@ -3,8 +3,8 @@
 
 **WHAT IS KEset ?**
 ----------------
-‏                                           
-KEset is a plug-in application that corrects gibberish typing.  
+‏
+KEset is a plug-in application that corrects gibberish typing.
 For example : If you typed the gibberish
 
 
