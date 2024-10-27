@@ -7,7 +7,9 @@
 KEset is a plug-in application that corrects gibberish typing.  
 For example : If you typed the gibberish
 
-'اثممخ صخقمي' , 
+
+'اثممخ صخقمي' ,
+
 it will be corrected  to 'hello world'.
 
 See more in the description on Options.js 
