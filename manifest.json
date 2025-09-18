@@ -1,9 +1,9 @@
 {
-  "name": "KEset | Correcting gibberish typing",
+  "name": "KEset | Fix gibberish from wrong keyboard layout",
   "description": "Correcting wrong language typing with a short-cut",
-  "version": "1.0",
+  "version": "1.3",
   "options_page": "options.html",
-  "permissions": [ "tabs", "storage", "activTab" ],
+  "permissions": [ "storage" ],
   "manifest_version": 3,
   "action": {
     "default_popup": "popup.html",
@@ -21,9 +21,9 @@
   "content_scripts": [
     {
       "matches": [ "<all_urls>" ],
-      "js": [ "jquery-3.5.1.min.js", "contentscript.js" ], // The order of the files in the list is important : jquery- before contentsc..  
+      "js": [ "jquery-3.5.1.min.js", "contentscript.js" ],
       "css": [ "extension.css" ],
-      "all_frames": true                                   // Thanks to wOxxOm from 'stackoverflow'.  This enables to get to 'inframes' elements. @@@ 04/2023
+      "all_frames": true
     }
   ],
   "icons": {
