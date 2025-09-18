@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -12,15 +12,25 @@
             border: 1px solid #bf982a;
             font-size: 13px;
         }
-            select option:checked {  /*Not working on some browsers*/ 
-                background:blue;     /* Set the background color for selected items */
-                color: white;        /* Set the text color for selected items */
+
+            select option:checked { /*Not working on some browsers*/
+                background: blue; /* Set the background color for selected items */
+                color: white; /* Set the text color for selected items */
             }
     </style>
 </head>
 <body style="background-color:lightyellow;">
     <script src="options.js"></script>
-    <img src="extension.png" alt="Image of this application" style="display: block; margin-left: auto; margin-right: auto;margin-bottom:0; width: 143px;height:91px;">
+    <div style="margin-top:0px;padding-top:0px;display:flex;">
+        <div style="margin-right: auto;width:33%;">
+        </div>
+        <div style="margin: 0 auto; width: 33%;">
+            <img src="extension.png" alt="Image of this application" style="display: block; margin-left: auto; margin-right: auto;margin-bottom:0; width: 143px;height:91px;">
+        </div>
+        <div style="margin-left: auto; width: 33%;">
+            <button id="version" title="Refresh the page to activate version" style="float:right; margin-top:20px;padding-bottom:0px; margin-right:30px; width:140px; height:46px;background-color:aquamarine;border-color:bisque;font-size:16px;">Get to old version</button>
+        </div>
+    </div>
     <div style="margin-left:40px;display:flex;">
         <div style="width:610px;flex:1;">
             <p style="font-size: 40px; color: blue;margin-bottom:20px;">How to use :</p>
@@ -68,10 +78,13 @@
             * If after conversion for some reason you need back the original wrong text , but it was erased , you can get the original text
               of the <span style="font-size: 14px; font-weight:bold;">last 3 conversions</span> , in the little rectangle(text area) above.
               I recommend , that if the content you typed is very important for you , copy it before converting.
-              <span style="font-size: 14px; font-weight:bold;">If you converted a secret code</span> like password , you should convert a new text (or empty) 3 <span style="font-size: 14px; font-weight:bold;">more</span> times untill it disappears.<br />
+            <span style="font-size: 14px; font-weight:bold;">If you converted a secret code</span> like password , you should convert some random text (or empty) 3 <span style="font-size: 14px; font-weight:bold;">more</span> times untill it disappears from the text area.<br />
             * On Facebook/Twitter you can get the converted text by clicking the plugin icon, in the opened pop up window.<br /><br />
             * This is a first version of the application.<br />
             * I wish you happy and correct typing.
+            <br />
+            <br />
+            For more information, please visit the <a href="https://yaakov41g.github.io/KEset-landing/" target="_blank" style="color: #0078D4; font-weight: bold;">KEset home and information page</a>.
         </p>
     </div>
     <br />
@@ -80,6 +93,7 @@
 
 </body>
 </html>
+
 
 
 
