@@ -1,4 +1,7 @@
-﻿//
+﻿// Clears the badge when the user clicks on the extension icon
+chrome.action.setBadgeText({ text: "" }); // clears badge on click
+
+//
 //*** Sends messages to toggle the conversion to on/of.  
 //**  Gets the converted text on Facebook/Twitter
 
@@ -26,6 +29,16 @@ toggleButton.addEventListener('click', () => {  // Sends messages to background.
         chrome.storage.local.set({ 'enabled': true }, function () { });
     }
 });
+//-----------------------------------------------------------------------------------------
+chrome.storage.local.get(['showUpdateInfo'], (result) => {
+    if (result.showUpdateInfo) {
+        // Show update info only once after the update. The message comes from background.js
+        chrome.storage.local.set({ showUpdateInfo: false });
+        document.getElementById('ta').placeholder = '';
+        document.getElementById('ta').value = 'New in this version:\n\nYou can now select part of the text and correct only that portion 🎯';
+    }
+});
+
 //----------------------------      old version of conversion for the textarea       ----------------------------
 
 var langFrom = 0;    // Index of the language that we want to convert. The index is the position of of the languages in the list.
@@ -51,7 +64,9 @@ board[4] = " `1234567890-=\\][ποιθυτρες;ασδφγηξκλ΄'/.,μνβ�
 board[1004] = " `1234567890-=\\][ΠΟΙΘΥΤΡΕς;ΑΣΔΦΓΗΞΚΛ΄'/.,ΜΝΒΩΨΧΖ";   // capital Greek 
 
 //---------------------------------------------------------------------------------------------------
-$("textarea").keydown(function (event) { checkKeys(event); });
+$("textarea").on("keydown", function (event) {
+  checkKeys(event);
+});
 
 chrome.storage.sync.get('langPosArr', function (data) { // To convert languages in text area
     langArray = data.langPosArr;

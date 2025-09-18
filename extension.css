@@ -8,13 +8,13 @@
 }
 
 .hoveringWindow_gibb107010021066080661060 { 
-    display: block;
+    display: flex;
     position: fixed;
     z-index: 100000;
     top: 100px;
     left: 200px;
-    width: 220px;
-    height: 150px;
+    width: 230px;
+    height: 200px;
     padding: 1px;
     border: 1px dotted grey;
     border-radius: 12px;
@@ -34,4 +34,19 @@
     border-radius: 12px;
     background-color: rgb(255, 255, 237);
 }
-
+.hoveringChk_gibb107010021066080661060 {
+    display: block;
+    position: fixed;
+    z-index: 100002;
+    top: 260px;
+    left: 210px;
+}
+.hoveringCanvas_gibb107010021066080661060 {
+    /*    display: block;
+    position: fixed;
+   z-index: -1;*/
+    float: left;
+    top: 240px;
+    left: 210px;
+    border: 1px solid black;
+}

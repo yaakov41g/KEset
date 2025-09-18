@@ -1,11 +1,12 @@
 ﻿//
 //*** Gets and Sends messages to restore the last original text in optins page textarea
 //**  and to stop/restart the possibility of conversion.
-
+var wasChanged = false;
 var toggleEnable = false;
+var oldVersion = "";
 GetFromStorage();
 //----------------------------------------------------------------------------------------------------
-async function GetFromStorage() {                // Why we need all this complexity ? See rematk (1)
+async function GetFromStorage() {                // Why we need all this complexity ? See remark (1)
     toggleEnable = await PromiseStorage_Get();
     //      --------   ---------   ---------      Initializing      ---------   -----------   ---------
     if (toggleEnable == undefined)               // Here we are initializing 'enabled' (on installing) to be used here and in popup.js
@@ -32,11 +33,11 @@ async function GetFromStorage() {                // Why we need all this complex
 // The selected languages and the toggling status of 'Start/Stop' are sent to the contentscript of the activated page
 // The original text is sent to options.js when activated
 chrome.tabs.onActivated.addListener(async function (tabInfo) {
-    chrome.tabs.sendMessage(tabInfo.tabId, { arrgo: 'selectedLanguages', originText: "theOriginalText", toggleStatus: await GetFromStorage() });
+    chrome.tabs.sendMessage(tabInfo.tabId, { arrgo: 'selectedLanguages', originText: "theOriginalText", toggleStatus: await GetFromStorage()/*, toggledVersion: oldVersion*/ });
 });
 chrome.tabs.onUpdated.addListener(async function (tabId, changeInfo, tab) {
     if (changeInfo.status === 'complete' || changeInfo.status === 'loading') { // Waits untill the tab is loaded completely. Otherwise 'disableExtension' in contentscript will reinitialize to false
-        chrome.tabs.sendMessage(tabId, { toggleStatus: await GetFromStorage() });
+        chrome.tabs.sendMessage(tabId, { toggleStatus: await GetFromStorage()/*, toggledVersion: oldVersion*/ });
     }
 });
 //----------------------------------------------------------------------------------------------------
@@ -56,6 +57,23 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
 });
 
+//----------------------------------------------------------------------------------------------------
+// Shows "NEW" badge on extension icon when the extension is updated
+chrome.runtime.onInstalled.addListener(function(details) {
+  if (details.reason === "update") {
+    chrome.action.setBadgeText({ text: "NEW" }); // 2–3 letter hint
+    chrome.action.setBadgeBackgroundColor({ color: "#4688FF" }); // blue color
+    chrome.action.setBadgeTextColor({ color: "#FFFFFF" });       // White text
+  }
+});
+//----------------------------------------------------------------------------------------------------
+chrome.runtime.onInstalled.addListener((details) => {
+    if (details.reason === 'update') {
+        chrome.storage.local.set({
+            showUpdateInfo: true,// Used in popup.js
+        });
+    }
+});
 
 //-----------------------------------------  Remarks  --------------------------------------------
 
