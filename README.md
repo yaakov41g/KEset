@@ -49,4 +49,11 @@ A video of how to use:
 
 [https://youtu.be/Y0tJ5VolqLg](https://www.youtube.com/watch?v=jdMnI-fTKkc)
 
+---
 
+## 🔍 Live Preview
+
+You can view the `options.html` file as a rendered webpage using this link:  
+👉 [Live Preview of options.html](https://htmlpreview.github.io/?https://github.com/yaakov41g/KEset/blob/main/options.html)  
+popup.html file:  
+👉 [Live Preview of options.html](https://htmlpreview.github.io/?https://github.com/yaakov41g/KEset/blob/main/popup.html).
