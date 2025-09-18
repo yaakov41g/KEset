@@ -55,5 +55,5 @@ A video of how to use:
 
 You can view the `options.html` file as a rendered webpage using this link:  
 👉 [Live Preview of options.html](https://htmlpreview.github.io/?https://github.com/yaakov41g/KEset/blob/main/options.html)  
-popup.html file:  
+popup.html file: (not in real dimensions)  
 👉 [Live Preview of options.html](https://htmlpreview.github.io/?https://github.com/yaakov41g/KEset/blob/main/popup.html).
